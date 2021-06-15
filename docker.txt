@@ -1,0 +1,13 @@
+docker run --volume {host dir}:{container dir} --name {} -d -p {host port}:{container port} -e {environment variables} image
+
+Example:
+
+$ docker run --volume /mnt/d/docker-shared:/mnt/shared --name mint-db-2 -d -p 1521:1521 -p 5500:5500 andresguerrero/oracledb:18.4.0-xe
+$ docker run --volume ~/docker-shared:/mnt/shared --name mint-db-aircanada -d -p 1521:1521 -p 5500:5500 andresguerrero/oracledb:18.4.0.aircanada
+
+$ docker exec -it {id} /bin/bash
+
+$ docker commit {id} {image name}
+
+$ docker image tag {id} {new tag}
+

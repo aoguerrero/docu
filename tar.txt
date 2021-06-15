@@ -1,0 +1,23 @@
+Compress files
+==============
+$ tar czvf archive.tar.gz /path/to/files
+
+Set a current directory (to prevent storing the full path)
+$ tar czvf archive.tar.gz -C /path/to/files .
+
+Extract an archive
+==================
+$ tar xzvf archive.tar.gz
+
+Output the files to a target directory
+$ tar xzvf archive.tar.gz -C /target/directory
+
+The option --strip-components=<n> can be used to skip path levels in the extracted files
+
+List the contents of an archive
+===============================
+$ tar tzvf archive.tar.gz
+
+Working with dififerent formats
+=============================== 
+The 'z' parameter works for tar.gz files, omit it for .tar files, replace with 'J' for tar.xz files and with 'j' for tar.bz2

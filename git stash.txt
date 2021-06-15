@@ -1,0 +1,17 @@
+$ git stash
+  ...git whatever...
+$ git stash apply  |
+                   |> $ git stash pop
+$ git stash clear  |
+
+Stash an specific file
+======================
+$ git stash push {path}
+
+
+Export the stash
+================
+$ git stash show -p --binary > changes.patch
+$ git apply changes.patch
+
+

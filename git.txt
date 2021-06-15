@@ -1,0 +1,16 @@
+git
+===
+
+List new files, ignored by .gitignored
+
+    git status --ignored
+
+Delete ignored files
+
+    git clean -xdf
+
+To preview fhe files to be deleted:
+
+    git clean -xn
+
+
