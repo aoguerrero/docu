@@ -1,0 +1,3 @@
+$ crontab -e
+
+@reboot sleep {seconds} && /path/to/command.sh # Run a command at boot

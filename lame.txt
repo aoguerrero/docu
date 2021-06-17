@@ -1,0 +1,3 @@
+Recode mp3 (128 kbs/44.1 Khz)
+-----------------------------
+$ find . -iname "*.mp3" -exec sh -c 'lame --mp3input -q 0 -b 128 --resample 44.1 "$1" /tmp/temp.mp3 && id3cp "$1" /tmp/temp.mp3 && mv /tmp/temp.mp3 "$1"' sh {} \;

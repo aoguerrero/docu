@@ -1,0 +1,14 @@
+Basic commands
+--------------
+
+$ sudo dnf install <package>
+$ sudo dnf remove <package>
+$ sudo dnf list installed
+$ sudo dnf search <package>
+$ sudo dnf update <package>
+
+Install security updates only
+-----------------------------
+
+$ sudo dnf updateinfo list sec
+

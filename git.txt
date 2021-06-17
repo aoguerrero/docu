@@ -1,16 +1,32 @@
-git
-===
+Basic commands
+--------------
 
-List new files, ignored by .gitignored
+$ git clone {url} 
+$ git branch {branch name}
+$ git checkout {branch name}
+$ git push origin {branch name}
+$ git pull origin {branch name}
+$ git branch -d {branch name} # Delete a LOCAL branch, use -D to force delete unmerged branch. 
+$ git push origin :{branch name} # Delete a REMOTE branch.
 
-    git status --ignored
+$ git stash # Create a new stash, to apply it, use '$ git stash apply' use pop = apply + clear
 
-Delete ignored files
+Other commands
+--------------
 
-    git clean -xdf
+$ git status --ignored # List new files, ignored by .gitignored
+$ git clean -xdfi # Delete ignored files, use -xn to preview before.
+$ git cherry-pick {hash} --no-commit
 
-To preview fhe files to be deleted:
+git log
+-------
 
-    git clean -xn
+$ git log -p # List lastest changes
+$ git log --oneline -- '*.java' # List the lastest changes of types with 'java' extension.
+$ git log --author=aguerrero
+$ git log --fist-parent # Show the change log, then commits of the parent branch.
 
-
+git show
+--------
+$ git show {commit id} # Show the files changed in an specific commit.
+$ git show HEAD # Show the files changed in the last commit, use HEAD-1 to go one commit before.

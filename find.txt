@@ -1,0 +1,30 @@
+Find by name
+$ find . -iname "{pattern}" -o -iname "{pattern}"
+
+Find by regex
+$ find . -iregex "\..*\.mp3"
+
+Delete files more than {n} days old
+$ find . -iname "{pattern}" -type f -mtime +{n} -delete
+
+Archieve and delete files
+$ find . -iname "{pattern}" -type f -print | xargs tar -czvPf ./{file}.tar.gz --remove-files
+
+Archieve and delete files more than {n} days old
+$ find . -iname "{pattern}" -type f -mtime +{n} -print | xargs tar -czvPf ./{file}.tar.gz --remove-files
+
+Change new lines from DOS to UNIX
+$ find ./ -type f -exec dos2unix {} \;
+
+Find and count
+$ find . -type f -name "*.pdf" | wc -l
+
+Find and delete
+$ find . -type f -name "*.json" -exec rm -f {} \;
+
+Run a command with each found file
+$ find . -exec sh -c 'commands "$1"' sh {} \;
+
+Find files bigger than
+$ find / -size +10M -size -12M -ls
+

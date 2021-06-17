@@ -1,3 +1,4 @@
 #!/bin/bash
+echo "========== Begin =========="
 cat $DOCU_HOME/"$*".txt
-
+echo "========== End =========="

@@ -1,0 +1,5 @@
+$ ssh-keygen -t rsa
+
+Change password of key
+----------------------
+$ ssh-keygen -f {private key} -p

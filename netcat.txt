@@ -1,0 +1,17 @@
+Server
+------
+
+$ mkfifo /tmp/netfifo; nc -lk 4201 0</tmp/netfifo | bash -e &>/tmp/netfifo
+
+Client
+------
+
+$ echo "ls" | nc HOST 4201
+
+Transfer file
+-------------
+
+$ nc -l -p 2020 > file.txt
+
+$ cat file.txt | nc dest.ip.address 2020
+

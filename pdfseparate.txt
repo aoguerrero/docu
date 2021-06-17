@@ -1,0 +1,1 @@
+$ pdfseparate -f <first page> -l <last page> input.pdf output.pdf

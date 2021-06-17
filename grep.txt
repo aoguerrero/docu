@@ -1,0 +1,11 @@
+$ grep -r --include=\*.ext "text" .
+$ grep --include=\*.{xml,properties} "text" .
+
+$ grep -r -P "[0-9]+" .
+
+Other options
+-------------
+-n Show the line number
+-l List files
+-o Prints the found text
+-i Case insensitive 

@@ -1,0 +1,4 @@
+$ screen -ls
+$ [CTRL+a] d # List screens
+$ screen -r # Re-attch a screen
+$ screen -XS {screen number} quit

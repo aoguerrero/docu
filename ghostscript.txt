@@ -1,0 +1,11 @@
+$ apt-get install ghostscript
+
+Merge multiple PDF
+------------------
+
+$ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -dCompressFonts=true -r150 -sOutputFile=output.pdf
+
+Remove password
+---------------
+
+$ gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -SPDFPassword=<password> -sOutputFile=unencrypted.pdf -c .setpdfwrite -f <file.pdf>
