@@ -5,7 +5,7 @@ $ docker run --volume {host dir}:{container dir} --name {} -d -p {host port}:{co
 
 Example:
 
-$ sudo docker run --volume ~/docker-shared:/mnt/shared --name mint-db-thy -d -p 1521:1521 -p 5500:5500 andresguerrero/oracledb:18.4.0
+$ sudo docker run --volume /mnt/external0/docker-shared:/mnt/shared --name mint-db-thy -d -p 1521:1521 -p 5500:5500 andresguerrero/oracledb:18.4.0
 
 Useful commands
 ---------------
